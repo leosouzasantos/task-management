@@ -1,9 +1,11 @@
 import { Module } from '@nestjs/common';
 import { UserController } from './user.controller';
+import { CreateUserUseCase } from './use-cases/create-user.usecase';
+import { PrismaService } from 'src/infra/prisma/prisma.service';
 
 @Module({
   imports: [],
   controllers: [UserController],
-  providers: [],
+  providers: [CreateUserUseCase, PrismaService],
 })
 export class UserModule {}
