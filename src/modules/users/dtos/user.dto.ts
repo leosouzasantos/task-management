@@ -1,6 +1,10 @@
 export type CreateUserDto = {
-  id: string;
-  name: string;
-  email: string;
   password: string;
+  email: string;
+  name: string;
 };
+
+export type UserCreatedDto = {
+  id: string;
+  created_at: Date;
+} & CreateUserDto;
